@@ -16,7 +16,6 @@ namespace DogdeGame
         public int kills = 0;
         public int ammo = 0;
         public int coins = 0;
-        public bool canGetCoin = true;
         public bool goLeft, goRigth, goUp, goDown;
         private string facing = "Rigth"; 
 

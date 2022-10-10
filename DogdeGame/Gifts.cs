@@ -12,6 +12,7 @@ namespace DogdeGame
         Random random = new Random();
         public bool canDropLife = true;
         public bool canDropAmmo = true;
+        public bool canDropCoin = true;
 
         public void DropAmmo(Form form, PictureBox player)
         {
@@ -50,7 +51,6 @@ namespace DogdeGame
             form.Controls.Add(coin);
             coin.BringToFront();
             player.BringToFront();
-
         }
 
         public void GiftTaken(Form form, Player Player, PictureBox playerAnimation)
@@ -83,7 +83,7 @@ namespace DogdeGame
                     {
                         form.Controls.Remove(x);
                         ((PictureBox)x).Dispose();
-                        Player.canGetCoin = true;
+                        canDropCoin = true;
                         Player.coins++;
                     }
                 }
@@ -92,10 +92,10 @@ namespace DogdeGame
 
         public void GiftsController(Form form, Player Player, PictureBox player)
         {
-            if (Player.kills % 3 == 0 && Player.kills != 0 && Player.canGetCoin == true)
+            if (Player.kills % 3 == 0 && Player.kills != 0 && canDropCoin == true)
             { 
                 DropCoin(form, player);
-                Player.canGetCoin = false;
+                canDropCoin = false;
             }
         }
 
@@ -127,8 +127,8 @@ namespace DogdeGame
             foreach (Control x in form.Controls)
                 if (x is PictureBox)
                     if ((string)x.Tag == "coin") form.Controls.Remove(x);
-
-            canDropAmmo = true;
+            
+            canDropCoin = true; 
         }
 
 
