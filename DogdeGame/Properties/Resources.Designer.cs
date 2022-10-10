@@ -73,6 +73,16 @@ namespace DogdeGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coinImg {
+            get {
+                object obj = ResourceManager.GetObject("coinImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enemyDown {
             get {
                 object obj = ResourceManager.GetObject("enemyDown", resourceCulture);
@@ -126,6 +136,16 @@ namespace DogdeGame.Properties {
         internal static System.Drawing.Bitmap GameOverImg {
             get {
                 object obj = ResourceManager.GetObject("GameOverImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap killImg {
+            get {
+                object obj = ResourceManager.GetObject("killImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

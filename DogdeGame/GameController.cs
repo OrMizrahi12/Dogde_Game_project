@@ -50,7 +50,6 @@ namespace DogdeGame
                 MessageBox.Show("\n A = Left \n W = Up \n D = Rigth \n S = Down \n P = Stop/Continue Game" );
                 gameTimer.Start();
             }
-
         }
 
         public void GameOperation(Form form,Timer gameTimer, Player Player,Gifts gifts, ProgressBar HealthProgress,PictureBox playerAnimation, PictureBox resetGameImg)
@@ -72,19 +71,14 @@ namespace DogdeGame
                 resetGameImg.Image = Properties.Resources.gameOverImage;
                 resetGameImg.BringToFront();
                 resetGameImg.Visible = true;
-
             }
         }
 
-        public void ShowTextContent(Player Player, Label txtKills, Label txtLive)
+        public void ShowTextContent(Player Player, Label txtKills, Label txtLive , Label txtCoins)
         {
             txtKills.Text = "Kill: " + Player.kills;
             txtLive.Text = "Ammo: " + Player.ammo;
+            txtCoins.Text = "Coins: " + Player.coins;
         }
-
-  
-
-
-
     }
 }

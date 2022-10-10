@@ -28,28 +28,24 @@ namespace DogdeGame
             enemyList.Add(enemy);
             form.Controls.Add(enemy);
             player.BringToFront();
-            enemy.Margin.Equals(form.Margin);   
-           
+            enemy.Margin.Equals(form.Margin);          
         }
 
         public void EnemyMoving(Form form, PictureBox player, Player Player, PictureBox playerAnimation)
         {
             foreach (Control x in form.Controls)
             {
-
                 if (x is PictureBox && (string)x.Tag == "enemy")
                 {
-
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
                         Player.playerHealt -= 20;
+                        playerAnimation.Image = Properties.Resources.playerDied;
                         form.Controls.Remove(x);
                         x.Dispose();
                         enemyList.Remove((PictureBox)x);
                         CreateEnemy(form, playerAnimation);
                     }
-
-
                     if (x.Left > player.Left)
                     {
                         x.Left -= random.Next(4, 6);
@@ -106,7 +102,5 @@ namespace DogdeGame
             
             enemyList.Clear();
         }
-
-
     }
 }

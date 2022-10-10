@@ -18,32 +18,28 @@ using System.Windows.Controls.Primitives;
 
 namespace DogdeGame
 {
-    public partial class Form1 : Form
+    public partial class DogdeGame : Form
     {
-        bool gameOver = false;
-
         Gifts gifts = new Gifts();
         Enemy enemy = new Enemy();
         Bullet bullet = new Bullet();
         Player Player = new Player();
         GameController gameController = new GameController();
-       
-
-        public Form1()
+      
+        public DogdeGame()
         {   
             InitializeComponent();
             resetGameImg.Visible = true;
         }
         private void MainTimerEvent(object sender, EventArgs e)
         {
-            Player.PlayerMoving(this, Player, playerAnimation);
+            Player.PlayerMoving(this, Player, playerAnimation);           
             gifts.GiftTaken(this, Player, playerAnimation);
-            
+            gifts.GiftsController(this,Player, playerAnimation);
             enemy.EnemyMoving(this, playerAnimation, Player, playerAnimation);
             enemy.KillEnemy(this, Player, playerAnimation);
-
             gameController.GameOperation(this, gameTimer, Player, gifts, HealthProgress, playerAnimation, resetGameImg);
-            gameController.ShowTextContent(Player, txtKills, txtLive);
+            gameController.ShowTextContent(Player, txtKills, txtLive, txtCoins);
         }
 
         private void keyIsDown(object sender, KeyEventArgs e)
@@ -61,7 +57,6 @@ namespace DogdeGame
         {
             gameController.gameOver = false;
             gameTimer.Start();
-
             enemy.RemoveAllEnemy(this);
             gifts.RemoveAllGifts(this);
             Player.ResetPlayerProperties(playerAnimation);
@@ -71,7 +66,5 @@ namespace DogdeGame
             freezOrRunMsg.Text = "Running";
             freezOrRunMsg.BackColor = Color.Green;
         }
-
-
     }
 }
