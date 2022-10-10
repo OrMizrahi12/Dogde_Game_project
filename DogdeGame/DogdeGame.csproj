@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.18.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.18.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bullet.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameController.cs" />
+    <Compile Include="Gifts.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -110,6 +119,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\playerLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOverImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moreLifeForPlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacgG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startGameImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameOverImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,16 @@ namespace DogdeGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bacgG {
+            get {
+                object obj = ResourceManager.GetObject("bacgG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enemyDown {
             get {
                 object obj = ResourceManager.GetObject("enemyDown", resourceCulture);
@@ -96,6 +106,36 @@ namespace DogdeGame.Properties {
         internal static System.Drawing.Bitmap enemyUp {
             get {
                 object obj = ResourceManager.GetObject("enemyUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gameOverImage {
+            get {
+                object obj = ResourceManager.GetObject("gameOverImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GameOverImg {
+            get {
+                object obj = ResourceManager.GetObject("GameOverImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap moreLifeForPlayer {
+            get {
+                object obj = ResourceManager.GetObject("moreLifeForPlayer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +196,26 @@ namespace DogdeGame.Properties {
         internal static System.Drawing.Bitmap playerUp {
             get {
                 object obj = ResourceManager.GetObject("playerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startGameImg {
+            get {
+                object obj = ResourceManager.GetObject("startGameImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startImg {
+            get {
+                object obj = ResourceManager.GetObject("startImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,9 +19,10 @@ namespace DogdeGame
         private PictureBox bullet = new PictureBox();
         private Timer bulletTimer = new Timer();
 
-        public void makeBullet(Form form)
+        public void MakeBullet(Form form)
         {
-            bullet.BackColor = Color.Yellow;
+
+            bullet.BackColor = Color.Red;
             bullet.Size = new Size(10, 5);
             bullet.Tag = "bullet";
             bullet.Left = BulletLeft;
@@ -62,6 +64,17 @@ namespace DogdeGame
                 bulletTimer = null;
                 bullet = null;
             }
+        }
+
+        public void ShootBullet(Form form, string _dirarction, PictureBox player)
+        {
+            Bullet shootBulet = new Bullet();
+
+            shootBulet.Direcrion = _dirarction;
+            shootBulet.BulletLeft = player.Left + (player.Width / 2);
+            shootBulet.BulletTop = player.Top + (player.Height / 2);
+
+            shootBulet.MakeBullet(form);
         }
 
 
