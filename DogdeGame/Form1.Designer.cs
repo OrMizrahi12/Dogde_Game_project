@@ -130,7 +130,7 @@
             // 
             this.playerAnimation.ErrorImage = global::DogdeGame.Properties.Resources.playerLeft;
             this.playerAnimation.Image = global::DogdeGame.Properties.Resources.playerLeft;
-            this.playerAnimation.Location = new System.Drawing.Point(407, 533);
+            this.playerAnimation.Location = new System.Drawing.Point(604, 547);
             this.playerAnimation.Name = "playerAnimation";
             this.playerAnimation.Size = new System.Drawing.Size(169, 122);
             this.playerAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -152,7 +152,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(991, 703);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1450, 703);
             this.Controls.Add(this.txtCoins);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.freezOrRunMsg);
